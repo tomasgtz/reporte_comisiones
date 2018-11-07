@@ -1,0 +1,187 @@
+SELECT dbo_admdocumentosmodelo.cdescripcion, 
+       dbo_admconceptos.cnombreconcepto, 
+       dbo_admdocumentos.cimporteextra2, 
+       dbo_admdocumentos.cfecha, 
+       dbo_admdocumentos.cfolio, 
+       dbo_admdocumentos.creferencia, 
+       dbo_admclientes.ccodigocliente, 
+       dbo_admclientes.crazonsocial, 
+       dbo_admalmacenes.ccodigoalmacen 
+       AS ALM, 
+       dbo_admproductos.ccodigoproducto, 
+       dbo_admproductos.cnombreproducto, 
+       dbo_admmovimientos.cunidades, 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, ( 
+       [dbo_admmovimientos] ! [cunidades] ) * Iif( 
+       [dbo_admdocumentosmodelo] ! [cafectaexistencia] 
+       = 1, 1, Iif( 
+       [dbo_admdocumentosmodelo] ! [cafectaexistencia] = 2, -1, 0))) 
+       AS QTY, 
+       dbo_admmovimientos.cpreciocapturado, 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, Iif( 
+       [dbo_admdocumentos] ! [cidmoneda] > 1, ( 
+       [dbo_admmovimientos] ! 
+       [cneto] - [dbo_admmovimientos] ! [cdescuento1] ), 
+       ( 
+       [dbo_admmovimientos] ! [cneto] - [dbo_admmovimientos] ! [cdescuento1] ) / 
+       [dbo_admtiposcambio] 
+       ! [cimporte])) 
+       AS [USD-NETO], 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, Iif( 
+       [dbo_admdocumentos] ! [cidmoneda] > 1, ( 
+       [dbo_admmovimientos] ! 
+       [cneto] - [dbo_admmovimientos] ! [cdescuento1] ) * 
+       [dbo_admdocumentos] ! [ctipocambio], ( 
+       [dbo_admmovimientos] ! 
+       [cneto] - [dbo_admmovimientos] ! [cdescuento1] ))) 
+       AS [MXN-NETO], 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, 
+       Iif([dbo_admdocumentos] ! [cidmoneda] > 1, ( 
+       0 - [dbo_admmovimientos] ! [cdescuento3] ) * [dbo_admdocumentos] ! 
+                                                  [ctipocambio], ( 0 
+       - [dbo_admmovimientos] ! [cdescuento3] ))) 
+       AS ANTICIPOS, 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, 
+       Iif([dbo_admdocumentos] ! [cidmoneda] > 1, ( 
+       [dbo_admmovimientos] ! [ccostoespecifico] ), ( 
+       [dbo_admmovimientos] ! [ccostoespecifico] ))) * Iif( 
+       [dbo_admmovimientos] ! [cafectaexistencia] = 1, 1, Iif( 
+       [dbo_admmovimientos] ! [cafectaexistencia] = 2, -1, 0)) 
+       AS [MXN-COSTO], 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, 
+       Iif([dbo_admdocumentos] ! [cidmoneda] > 1, 
+       ( [dbo_admmovimientos] ! [cimpuesto1] ) * [dbo_admdocumentos] ! 
+       [ctipocambio], ( 
+       [dbo_admmovimientos] ! [cimpuesto1] ))) 
+       AS [MXN-IVA], 
+       Iif([dbo_admdocumentos] ! [ccancelado] = 1, 0, 
+       Iif([dbo_admdocumentos] ! [cidmoneda] > 1, 
+       ( [dbo_admmovimientos] ! [ctotal] ) * [dbo_admdocumentos] 
+       ! [ctipocambio], ( [dbo_admmovimientos] ! [ctotal] ))) 
+       AS [MXN-T], 
+       Year([dbo_admdocumentos] ! [cfecha]) 
+       AS AÑO, 
+       ( Year([dbo_admdocumentos] ! [cfecha]) * 100 ) + Month( 
+       [dbo_admdocumentos] ! [cfecha]) 
+       AS MES, 
+       dbo_admdocumentosmodelo.cmodulo, 
+       dbo_admdocumentosmodelo.cusacliente, 
+       dbo_admdocumentosmodelo.cusaproveedor, 
+       dbo_admdocumentosmodelo.cnaturaleza, 
+       dbo_admdocumentosmodelo.cafectaexistencia, 
+       dbo_admmovimientos.cunidadespendientes, 
+       Iif([dbo_admmovimientos] ! [cunidadespendientes] > 0, "pendiente", 
+       "surtido") AS 
+       PENDIENTE, 
+       dbo_admproductos.ctipoproducto, 
+       dbo_admmovimientos.cnumeromovimiento, 
+       dbo_admdocumentos.ccancelado, 
+       [dbo_admmovimientos] ! [cpreciocapturado] * [dbo_admmovimientos] ! 
+       [cunidadespendientes] 
+       AS [$XSURTIR], 
+       [dbo_admmonedas] ! [cnombremoneda] 
+       AS MONEDA, 
+       dbo_admproyectos.ccodigoproyecto, 
+       dbo_admproyectos.cnombreproyecto 
+FROM   ((((((dbo_admclientes 
+             INNER JOIN ((dbo_admconceptos 
+                          INNER JOIN dbo_admdocumentosmodelo 
+                                  ON dbo_admconceptos.ciddocumentode = 
+                                     dbo_admdocumentosmodelo.ciddocumentode) 
+                         INNER JOIN dbo_admdocumentos 
+                                 ON ( dbo_admdocumentosmodelo.ciddocumentode = 
+                                      dbo_admdocumentos.ciddocumentode ) 
+                                    AND ( dbo_admconceptos.cidconceptodocumento 
+                                          = 
+dbo_admdocumentos.cidconceptodocumento )) 
+ON dbo_admclientes.cidclienteproveedor = 
+dbo_admdocumentos.cidclienteproveedor) 
+INNER JOIN dbo_admmovimientos 
+ON ( dbo_admdocumentos.ciddocumento = dbo_admmovimientos.ciddocumento ) 
+AND ( dbo_admdocumentosmodelo.ciddocumentode = 
+dbo_admmovimientos.ciddocumentode )) 
+INNER JOIN dbo_admproductos 
+ON dbo_admmovimientos.cidproducto = dbo_admproductos.cidproducto) 
+INNER JOIN dbo_admalmacenes 
+ON dbo_admmovimientos.cidalmacen = dbo_admalmacenes.cidalmacen) 
+INNER JOIN dbo_admtiposcambio 
+ON dbo_admdocumentos.cfecha = dbo_admtiposcambio.cfecha) 
+INNER JOIN dbo_admmonedas 
+ON dbo_admdocumentos.cidmoneda = dbo_admmonedas.cidmoneda) 
+LEFT JOIN dbo_admproyectos 
+ON dbo_admdocumentos.cidproyecto = dbo_admproyectos.cidproyecto 
+WHERE  (( ( dbo_admtiposcambio.cidmoneda ) = 2 )); 
+
+
+
+
+UNION 
+SELECT     dbo_admdocumentosmodelo.cdescripcion, 
+           dbo_admconceptos.cnombreconcepto, 
+           dbo_admdocumentos.cimporteextra2, 
+           dbo_admdocumentos.cfecha, 
+           dbo_admdocumentos.cfolio, 
+           dbo_admdocumentos.creferencia, 
+           dbo_admclientes.ccodigocliente, 
+           dbo_admclientes.crazonsocial, 
+           [dbo_admAlmacenes_1]![CCODIGOALMACEN] AS alm, 
+           dbo_admproductos.ccodigoproducto, 
+           dbo_admproductos.cnombreproducto, 
+           dbo_admmovimientos_1.cunidades, 
+           iif([dbo_admDocumentos]![CCANCELADO]=1,0,([dbo_admMovimientos]![CUNIDADES])*iif([dbo_admDocumentosModelo]![CAFECTAEXISTENCIA]=1,1,iif([dbo_admDocumentosModelo]![CAFECTAEXISTENCIA]=2,-1,0))) AS qty, 
+           dbo_admmovimientos_1.cpreciocapturado, 
+           iif([dbo_admDocumentos]![CCANCELADO]=1,0,iif([dbo_admDocumentos]![CIDMONEDA]>1,([dbo_admMovimientos_1]![CNETO]-[dbo_admMovimientos_1]![CDESCUENTO1]),([dbo_admMovimientos_1]![CNETO]-[dbo_admMovimientos_1]![CDESCUENTO1])/[dbo_admTiposCambio]![CIMPORTE]))                              AS [USD-NETO], 
+           iif([dbo_admDocumentos]![CCANCELADO]=1,0,iif([dbo_admDocumentos]![CIDMONEDA]>1,([dbo_admMovimientos_1]![CNETO]-[dbo_admMovimientos_1]![CDESCUENTO1])*[dbo_admDocumentos]![CTIPOCAMBIO],([dbo_admMovimientos_1]![CNETO]-[dbo_admMovimientos_1]![CDESCUENTO1])))                            AS [MXN-NETO], 
+           iif([dbo_admDocumentos]![CCANCELADO]=1,0,iif([dbo_admDocumentos]![CIDMONEDA]>1,(0                             -[dbo_admMovimientos_1]![CDESCUENTO3])*[dbo_admDocumentos]![CTIPOCAMBIO],(0-[dbo_admMovimientos_1]![CDESCUENTO3])))                                                         AS anticipos, 
+           
+	   iif([dbo_admDocumentos]![CCANCELADO]=1,0,
+		iif([dbo_admDocumentos]![CIDMONEDA]>1,
+		([dbo_admMovimientos_1]![CCOSTOESPECIFICO]),
+		([dbo_admMovimientos_1]![CCOSTOESPECIFICO])))*iif([dbo_admMovimientos_1]![CAFECTAEXISTENCIA]=1,1,
+		iif([dbo_admMovimientos_1]![CAFECTAEXISTENCIA]=2,-1,0))       AS [MXN-COSTO], 
+           
+	   
+	   
+	   iif([dbo_admDocumentos]![CCANCELADO]=1,0,iif([dbo_admDocumentos]![CIDMONEDA]>1,([dbo_admMovimientos_1]![CIMPUESTO1]),([dbo_admMovimientos_1]![CIMPUESTO1])))            *iif([dbo_admDocumentosModelo]![CAFECTAEXISTENCIA]=1,1,iif([dbo_admDocumentosModelo]![CAFECTAEXISTENCIA]=2,-1,0)) AS [MXN-IVA],
+           iif([dbo_admDocumentos]![CCANCELADO]=1,0,iif([dbo_admDocumentos]![CIDMONEDA]>1,([dbo_admMovimientos_1]![CTOTAL]),([dbo_admMovimientos_1]![CTOTAL])))                    *iif([dbo_admDocumentosModelo]![CAFECTAEXISTENCIA]=1,1,iif([dbo_admDocumentosModelo]![CAFECTAEXISTENCIA]=2,-1,0)) AS [MXN-TOTAL], 
+           year([dbo_admDocumentos]![CFECHA])                                                                                                                                                                                                        AS a�o,
+           (year([dbo_admDocumentos]![CFECHA])*100)+month([dbo_admDocumentos]![CFECHA])                                                                                                                                                                                                        AS mes,
+           dbo_admdocumentosmodelo.cmodulo, 
+           dbo_admdocumentosmodelo.cusacliente, 
+           dbo_admdocumentosmodelo.cusaproveedor, 
+           dbo_admdocumentosmodelo.cnaturaleza, 
+           dbo_admdocumentosmodelo.cafectaexistencia, 
+           dbo_admmovimientos_1.cunidadespendientes, 
+           iif([dbo_admMovimientos_1]![CUNIDADESPENDIENTES]>0,"Pendiente","Surtido") AS pendiente, 
+           dbo_admproductos.ctipoproducto, 
+           dbo_admmovimientos.cnumeromovimiento, 
+           dbo_admdocumentos.ccancelado, 
+           [dbo_admMovimientos_1]![CPRECIOCAPTURADO]*[dbo_admMovimientos_1]![CUNIDADESPENDIENTES] AS [$XSURTIR], 
+           [dbo_admMonedas]![CNOMBREMONEDA]                                                       AS moneda, 
+           dbo_admproyectos.ccodigoproyecto, 
+           dbo_admproyectos.cnombreproyecto 
+FROM       (((((dbo_admproductos 
+INNER JOIN dbo_admmovimientos AS dbo_admmovimientos_1 
+ON         dbo_admproductos.cidproducto = dbo_admmovimientos_1.cidproducto) 
+INNER JOIN (((dbo_admclientes 
+INNER JOIN (dbo_admdocumentosmodelo 
+INNER JOIN (dbo_admconceptos 
+INNER JOIN dbo_admdocumentos 
+ON         dbo_admconceptos.cidconceptodocumento = dbo_admdocumentos.cidconceptodocumento) 
+ON         dbo_admdocumentosmodelo.ciddocumentode = dbo_admdocumentos.ciddocumentode) 
+ON         dbo_admclientes.cidclienteproveedor = dbo_admdocumentos.cidclienteproveedor) 
+INNER JOIN dbo_admmovimientos 
+ON         dbo_admdocumentos.ciddocumento = dbo_admmovimientos.ciddocumento) 
+INNER JOIN dbo_admtiposcambio 
+ON         dbo_admdocumentos.cfecha = dbo_admtiposcambio.cfecha) 
+ON         dbo_admmovimientos_1.cidmovtoowner = dbo_admmovimientos.cidmovimiento) 
+INNER JOIN dbo_admmonedas 
+ON         dbo_admdocumentos.cidmoneda = dbo_admmonedas.cidmoneda) 
+INNER JOIN dbo_admalmacenes 
+ON         dbo_admmovimientos.cidalmacen = dbo_admalmacenes.cidalmacen) 
+INNER JOIN dbo_admalmacenes AS dbo_admalmacenes_1 
+ON         dbo_admmovimientos_1.cidalmacen = dbo_admalmacenes_1.cidalmacen) 
+LEFT JOIN  dbo_admproyectos 
+ON         dbo_admdocumentos.cidproyecto = dbo_admproyectos.cidproyecto 
+WHERE      ((( 
+                                            dbo_admtiposcambio.cidmoneda)=2));

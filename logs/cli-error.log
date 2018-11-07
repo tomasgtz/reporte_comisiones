@@ -1,0 +1,545 @@
+2017-07-28 13:39:58 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Cake" could not be found. in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php on line 327
+Exception Attributes: array (
+  'class' => 'Cake',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(226): Cake\Console\ShellDispatcher->findShell('Cake')
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
+2017-07-28 13:40:26 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Mysql cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysql',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Mysql), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-07-28 13:49:13 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Mysql cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysql',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Mysql), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-07-28 13:49:49 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Mysql cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysql',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Mysql), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-07-28 13:49:51 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Mysql cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysql',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Mysql), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-07-28 13:50:12 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Mysql cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysql',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Mysql), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-07-28 13:50:26 Error: [Cake\Database\Exception\MissingDriverException] Database driver Cake\Database\Driver\Mysqli could not be found. in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 168
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysqli',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver('Cake\\Database\\D...', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-07-28 14:57:28 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Mysql cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Mysql',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Mysql), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(192): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(109): Bake\Shell\Task\ModelTask->getTableObject('Users', 'users')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('users')
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-08-03 15:44:54 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlserver cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlserver',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlserver), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1006): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2017-08-03 15:51:08 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlserver cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlserver',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlserver), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1006): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2017-08-03 15:51:46 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlserver cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlserver',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlserver), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1006): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2017-08-03 15:53:26 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlserver cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlserver',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlserver), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1006): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2017-08-03 17:24:09 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlserver cannot be used due to a missing PHP extension or unmet dependency in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php on line 173
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlserver',
+)
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(116): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlserver), Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(93): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1006): Cake\Datasource\ConnectionManager::get('default')
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2017-08-03 17:38:40 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:39:04 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:39:56 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:40:44 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:45:14 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:47:02 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:47:22 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:47:52 Error: [PDOException] SQLSTATE[IMSSP]: This extension requires the Microsoft ODBC Driver 11 or 13 for SQL Server to communicate with SQL Server. Access the following URL to download the ODBC Driver 11 or 13 for SQL Server for x64: http://go.microsoft.com/fwlink/?LinkId=163712 in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 17:50:26 Error: [PDOException] SQLSTATE[IMSSP]: An invalid encoding was specified for SQLSRV_ATTR_ENCODING. in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('sqlsrv:Server=S...', 'sa', 'sdi$SERVER91', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Driver\Sqlserver.php(93): Cake\Database\Driver\Sqlserver->_connect('sqlsrv:Server=S...', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Sqlserver->connect()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Dialect\SqlserverDialectTrait.php(306): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Sqlserver))
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Sqlserver->schemaDialect()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(981): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(90): Bake\Shell\Task\ModelTask->listUnskipped()
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main()
+#13 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#14 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2017-08-03 18:55:22 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cake_bookmarks.adm_documentos' doesn't exist in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'adm_documentos', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('adm_documentos', Array)
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\ORM\Table.php(531): Cake\Database\Schema\CachedCollection->describe('adm_documentos')
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\ORM\Table.php(652): Cake\ORM\Table->getSchema()
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(217): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'adm_documentos', 'AdmDocumentos')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('AdmDocumentos')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main('AdmDocumentos')
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#13 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2017-08-03 18:55:52 Error: [Cake\Database\Exception] Cannot describe adm_documentos. It has 0 columns. in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 99
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('adm_documentos', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\ORM\Table.php(531): Cake\Database\Schema\CachedCollection->describe('adm_documentos')
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\ORM\Table.php(652): Cake\ORM\Table->getSchema()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(217): Cake\ORM\Table->getPrimaryKey()
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'adm_documentos', 'AdmDocumentos')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('AdmDocumentos')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main('AdmDocumentos')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#13 {main}
+
+
+2017-08-03 18:56:20 Error: [Cake\Database\Exception] Cannot describe adm_documentos. It has 0 columns. in C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 99
+Stack Trace:
+#0 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('adm_documentos', Array)
+#1 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\ORM\Table.php(531): Cake\Database\Schema\CachedCollection->describe('adm_documentos')
+#2 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\ORM\Table.php(652): Cake\ORM\Table->getSchema()
+#3 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(217): Cake\ORM\Table->getPrimaryKey()
+#4 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#5 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'adm_documentos', 'AdmDocumentos')
+#6 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('AdmDocumentos')
+#7 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(472): Bake\Shell\Task\ModelTask->main('admDocumentos')
+#8 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#10 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#11 C:\Apache24\htdocs\reporte_comisiones\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#12 C:\Apache24\htdocs\reporte_comisiones\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#13 {main}
+
+
